@@ -2,7 +2,7 @@
   display: flex;
   margin-top: 1rem;
   flex-direction: row;
-  padding: 1rem;
+  padding: 0.9rem;
 }
 
 .item-details .item-image {

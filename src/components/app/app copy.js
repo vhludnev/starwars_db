@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 
 import Header from '../header';
 import RandomPlanet from '../random-planet';
-//import ItemList from '../item-list';
-import ErrorButton from '../error-button';
+import ItemList from '../item-list';
+//import ErrorButton from '../error-button';
 import ErrorBoundry from "../error-boundry";
-//import ItemDetails, { Record } from '../item-details/item-details';
+import ItemDetails, { Record } from '../item-details/item-details';
 import PeoplePage from '../people-page';
-import PlanetsPage from '../planets-page';
-import StarshipsPage from '../starships-page';
-//import Row from '../row/row';
-//import SwapiService from '../../services/swapi-service';
+import Row from '../row/row';
+import SwapiService from '../../services/swapi-service';
 
 import './app.css';
 
 export default class App extends Component {
 
-//  swapiService = new SwapiService();
+  swapiService = new SwapiService();
 
   state = {
     showRandomPlanet: true
@@ -34,48 +32,48 @@ export default class App extends Component {
   render() {
 
     const planet = this.state.showRandomPlanet ? <RandomPlanet/> : null;
-    // const { getPerson, getPersonImage, getStarship, getStarshipImage, getPlanet, getPlanetImage } = this.swapiService;
-    // const personDetails = (
-    //         <ItemDetails 
-    //           itemId={11}
-    //           getData={getPerson}
-    //           getImageUrl={getPersonImage}>
+    const { getPerson, getPersonImage, getStarship, getStarshipImage, getPlanet, getPlanetImage } = this.swapiService;
+    const personDetails = (
+            <ItemDetails 
+              itemId={11}
+              getData={getPerson}
+              getImageUrl={getPersonImage}>
                 
-    //           <Record field="gender" label="Gender" />
-    //           <Record field="eyeColor" label="Eye Color" />
-    //           <Record field="birthYear" label="Birth Year" />
-    //         </ItemDetails>
-    // );
-    // const starshipDetails = (
-    //         <ItemDetails 
-    //           itemId={10}
-    //           getData={getStarship}
-    //           getImageUrl={getStarshipImage}>
+              <Record field="gender" label="Gender" />
+              <Record field="eyeColor" label="Eye Color" />
+              <Record field="birthYear" label="Birth Year" />
+            </ItemDetails>
+    );
+    const starshipDetails = (
+            <ItemDetails 
+              itemId={10}
+              getData={getStarship}
+              getImageUrl={getStarshipImage}>
 
-    //           <Record field="model" label="Model" />
-    //           <Record field="length" label="Length" />
-    //           <Record field="costInCredits" label="Cost" />
-    //         </ItemDetails>
-    // );
+              <Record field="model" label="Model" />
+              <Record field="length" label="Length" />
+              <Record field="costInCredits" label="Cost" />
+            </ItemDetails>
+    );
 
-    // const planetDetails = (
-    //         <ItemDetails 
-    //           itemId={10}
-    //           getData={getPlanet}
-    //           getImageUrl={getPlanetImage}>
+    const planetDetails = (
+            <ItemDetails 
+              itemId={10}
+              getData={getPlanet}
+              getImageUrl={getPlanetImage}>
 
-    //           <Record field="population" label="Population" />
-    //           <Record field="diameter" label="Diameter" />
-    //           <Record field="climate" label="Climate" />
-    //         </ItemDetails>
-    // );
+              <Record field="population" label="Population" />
+              <Record field="diameter" label="Diameter" />
+              <Record field="climate" label="Climate" />
+            </ItemDetails>
+    );
 
     return (
       <ErrorBoundry>
         <div className="container stardb-app">
           <Header />
           { planet }
-          
+          {/*
           <div className="row mb2 button-row">
             <span>
             <button
@@ -87,11 +85,9 @@ export default class App extends Component {
             <span>
               <ErrorButton />
             </span>
-          </div>
+          </div> */}
 
           <PeoplePage />
-          <PlanetsPage />
-          <StarshipsPage />
           {/* <Row 
             leftEl={
               <ItemList
@@ -101,9 +97,9 @@ export default class App extends Component {
                 />}
             rightEl={personDetails} /> */}
 
-          {/* <Row 
+          <Row 
             leftEl={starshipDetails}
-            rightEl={planetDetails} /> */}
+            rightEl={planetDetails} />
           {/* <PeoplePage />
           
           <Row 
