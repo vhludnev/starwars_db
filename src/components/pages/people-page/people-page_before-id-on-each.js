@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import ItemList from '../item-list/item-list';
-import ItemDetails, { Record } from '../item-details/item-details';
-import ErrorBoundry from '../error-boundry';
-import Row from '../row';
-import SwapiService from "../../services/swapi-service";
+import ItemList from '../../item-list/item-list';
+import ItemDetails, { Record } from '../../item-details/item-details';
+import ErrorBoundry from '../../error-boundry';
+import Row from '../../row';
+import SwapiService from "../../../services/swapi-service";
 
 import './people-page.css';
 //import ErrorButton from '../error-button';
@@ -15,9 +15,7 @@ export default class PeoplePage extends Component {
   swapiService = new SwapiService();
 
   state = {
-    selectedPerson: 11/* ,
-    selectedStarship: 5,
-    selectedPlanet: 7, */
+    selectedPerson: 11
   };
 
   onPersonSelected = (selectedPerson) => {

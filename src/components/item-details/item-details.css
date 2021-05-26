@@ -2,7 +2,11 @@
   display: flex;
   margin-top: 1rem;
   flex-direction: row;
-  padding: 0.9rem;
+  padding: 1rem;
+}
+
+.card-body{
+  padding-bottom: 55px !important;
 }
 
 .item-details .item-image {
@@ -19,6 +23,7 @@
   margin-right: .5rem;
 }
 .centered {
+  padding-top: 15px;
   display: flex;
   /* align-items: center; */
   justify-content: center;

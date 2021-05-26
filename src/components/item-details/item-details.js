@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Spinner from '../spinner/spinner';
-import ErrorButton from '../error-button/error-button';
+//import ErrorButton from '../error-button/error-button';
 import SwapiService from '../../services/swapi-service';
 
 import './item-details.css';
@@ -15,7 +15,6 @@ const Record = ({ item, field, label }) => {
   );
 };
 export { Record };
-
 
 export default class ItemDetails extends Component {
 
@@ -57,9 +56,7 @@ export default class ItemDetails extends Component {
   }
 
   render() {
-
     const { item, image, loading } = this.state;
-
     if (item && loading) {
       return <span className="centered"><Spinner/></span>;
     }
@@ -95,10 +92,11 @@ export default class ItemDetails extends Component {
             <li className="list-group-item">
               <span className="term">Eye Color</span>
               <span>{eyeColor}</span>
-            </li>  */}          
-              <span>
+            </li>  */}  
+
+              {/* <span>
                 <ErrorButton />
-              </span>          
+              </span> */}          
           </ul>
         </div>
       </div>
