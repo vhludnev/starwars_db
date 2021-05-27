@@ -4,7 +4,7 @@ import './header.css';
 
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ isLoggedIn }) => {
 
   return (
     <div className="header d-flex">
@@ -23,10 +23,10 @@ const Header = () => {
         <li>
           <Link to="/starships/">Starships</Link>
         </li>
-        <li>
+        <li className={isLoggedIn ? 'd-none' : ''}>
           <Link to="/login">Login</Link>
         </li>
-        <li /* className={isLoggedIn ? '' : 'd-none'} */>
+        <li className={isLoggedIn ? '' : 'd-none'}>
           <Link to="/secret">Secret Page</Link>
         </li>
       </ul>

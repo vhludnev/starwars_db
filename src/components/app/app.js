@@ -88,7 +88,7 @@ export default class App extends Component {
       <ErrorBoundry>
         <Router>
           <div className="stardb-app">
-            <Header />
+            <Header isLoggedIn={isLoggedIn} />
             { planet }
             
           {/*  <div className="row mb2 button-row">
