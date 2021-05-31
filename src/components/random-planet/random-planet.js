@@ -9,12 +9,8 @@ import './random-planet.css';
 export default class RandomPlanet extends Component {
 
   static defaultProps = {
-    updateInterval: 10000 // will be activated if no value set in app.js RandomPlanet component
+    updateInterval: 10000       // will be activated if no value set in app.js RandomPlanet component
   };
-
-  /* static propTypes = {
-    updateInterval: PropTypes.number  // error check if updateInterval value has been set
-  }; */
 
   swapiService = new SwapiService();
 
@@ -22,13 +18,6 @@ export default class RandomPlanet extends Component {
     planet: {}, 
     loading: true
   };
-
-//  constructor() {
-//    super();
-//    this.updatePlanet();
-//    /*this.interval =*/ setInterval(this.updatePlanet, 15000);
-//    /* clearInterval(this.interval); */
-//  }
 
   componentDidMount() {
     this.updatePlanet();
@@ -105,41 +94,4 @@ const PlanetView = ({ planet }) => {
         </div>
     </>
   );
-};
-
-
-
-
-
-// const { planet: { id, name, population, rotationPeriod, diameter }, loading, error } = this.state;
-
-//     if (loading /* && !error */) {
-//       return <div className="random-planet jumbotron rounded"><Spinner/></div>
-
-//     } else if (error) {
-//       return <ErrorIndicator/>
-
-//     } else return (
-//       <div className="random-planet jumbotron rounded">
-//         <img className="planet-image"
-//              src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} alt={`planet ${name}`} />
-//         <div>
-//           <h4>{name}</h4>
-//           <ul className="list-group list-group-flush">
-//             <li className="list-group-item">
-//               <span className="term">Population</span>
-//               <span>{population}</span>
-//             </li>
-//             <li className="list-group-item">
-//               <span className="term">Rotation Period</span>
-//               <span>{rotationPeriod}</span>
-//             </li>
-//             <li className="list-group-item">
-//               <span className="term">Diameter</span>
-//               <span>{diameter}</span>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     );
-//   }
+}

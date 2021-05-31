@@ -16,6 +16,6 @@ const ErrorIndicator = () => {
       </span>
     </div>
   );
-};
+}
 
 export default ErrorIndicator;

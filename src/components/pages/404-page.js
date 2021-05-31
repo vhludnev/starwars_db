@@ -8,7 +8,7 @@ const PageNotFound = () => {
             </div>
             <img className="img-fluid" src="https://i.imgur.com/qIufhof.png" alt="not-found"/>          
         </div >
-    )
+    );
 }
 
-export default PageNotFound
+export default PageNotFound;

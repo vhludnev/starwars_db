@@ -32,6 +32,6 @@ const Header = ({ isLoggedIn }) => {
       </ul>
     </div>
   );
-};
+}
 
 export default Header;

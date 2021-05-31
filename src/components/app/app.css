@@ -5,14 +5,9 @@ h2, h3 {
 }
 
 .button-row {
-   /* margin: 0 0 1rem 0; */
    margin: 0 auto;
    display: inline-block;
 }
-
-/* .button-row button {
-    margin-right: 1rem;
-} */
 
 .stardb-app .row {
     margin-bottom: 1rem;

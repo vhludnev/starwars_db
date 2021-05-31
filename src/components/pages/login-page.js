@@ -17,6 +17,6 @@ const LoginPage = ({ isLoggedIn, onLogin }) => {
       </button>
     </div>
   );
-};
+}
 
 export default LoginPage;

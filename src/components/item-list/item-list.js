@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-//import { traverseTwoPhase } from 'react-dom/test-utils';
+
 import Spinner from '../spinner/spinner';
-//import SwapiService from '../../services/swapi-service';
 
 import './item-list.css';
 
 export default class ItemList extends Component {
-
-//  swapiService = new SwapiService();
 
   state = {
     itemList: null
@@ -18,8 +15,6 @@ export default class ItemList extends Component {
     const { getData } = this.props;
 
     getData()
-    //this.swapiService
-    //  .getAllPeople()
       .then((itemList) => {
         this.setState({ 
           itemList
@@ -54,5 +49,5 @@ export default class ItemList extends Component {
         { this.renderItems(itemList) }
       </ul>
     );
-  }
+  };
 }

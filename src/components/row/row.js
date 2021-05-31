@@ -13,6 +13,6 @@ const Row = ({ leftEl, rightEl }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Row;
