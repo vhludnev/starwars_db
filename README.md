@@ -1,3 +1,11 @@
-# Starwars database project
-## built on React with VScode
+## Starwars database project
+
+- React
+- React-router
+- Error-boundry
+- Spinner
+- 404 page
+- API
+
+[Check on Heroku](https://starwars-db.herokuapp.com/)
 
