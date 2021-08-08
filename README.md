@@ -7,5 +7,5 @@
 - 404 page
 - API
 
-[Check website](https://starwars-apibd.netlify.app/)
+[Check website](https://starwars-apidb.netlify.app/)
 
