@@ -7,5 +7,5 @@
 - 404 page
 - API
 
-[Check on Heroku](https://starwars-apidb.herokuapp.com/)
+[Check website](https://starwars-apibd.netlify.app/)
 
