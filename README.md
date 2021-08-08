@@ -7,5 +7,5 @@
 - 404 page
 - API
 
-[Check on Heroku](https://starwars-db.herokuapp.com/)
+[Check on Heroku](https://starwars-apidb.herokuapp.com/)
 
